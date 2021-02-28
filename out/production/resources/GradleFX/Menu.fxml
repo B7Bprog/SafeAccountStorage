@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GradleFX.MenuSceneController">
+   <children>
+      <ImageView fitHeight="530.0" fitWidth="450.0">
+         <image>
+            <Image url="@frame.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="TitleLabel" layoutX="14.0" layoutY="27.0" prefHeight="29.0" prefWidth="215.0" text="Welcome!">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="Exit" layoutX="371.0" layoutY="27.0" mnemonicParsing="false" onAction="#exit" prefHeight="29.0" prefWidth="65.0" text="Exit" textAlignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Label fx:id="menuLabel" layoutX="14.0" layoutY="94.0" prefHeight="29.0" prefWidth="422.0" text="Please choose from the following options:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="allAccounts" layoutX="14.0" layoutY="130.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="25.0" prefWidth="422.0" text="View all account names">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="viewSpecific" layoutX="14.0" layoutY="175.0" mnemonicParsing="false" onAction="#changeToSpecAccount" prefHeight="25.0" prefWidth="422.0" text="View a specific account with all details">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="addNew" layoutX="14.0" layoutY="219.0" mnemonicParsing="false" onAction="#changeToAddAccount" prefHeight="25.0" prefWidth="422.0" text="Add new account">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="deleteAcc" layoutX="14.0" layoutY="265.0" mnemonicParsing="false" onAction="#changeToDeleteAccountSceneController" prefHeight="25.0" prefWidth="422.0" text="Delete an account" textFill="#790000">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="changeKey" layoutX="14.0" layoutY="442.0" mnemonicParsing="false" onAction="#changeToNewPWSceneController" prefHeight="25.0" prefWidth="422.0" text="Change main password" textFill="#04004a">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Label layoutX="14.0" layoutY="496.0" prefHeight="20.0" prefWidth="108.0" text="Remaining time:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="time" alignment="CENTER" layoutX="128.0" layoutY="496.0" prefHeight="20.0" prefWidth="38.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="182.0" layoutY="496.0" prefHeight="17.0" prefWidth="53.0" text="Seconds">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="extend" layoutX="292.0" layoutY="491.0" mnemonicParsing="false" onAction="#extendTime" prefHeight="30.0" prefWidth="144.0" text="Extend time (4min)">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ProgressBar fx:id="bar" layoutX="12.0" layoutY="475.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="14.0" prefWidth="422.0" progress="0.0" style="-fx-accent: GREEN;" />
+   </children>
+</AnchorPane>

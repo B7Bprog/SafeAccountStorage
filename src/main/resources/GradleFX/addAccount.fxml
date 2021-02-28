@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GradleFX.AddAccountSceneController">
+   <children>
+      <ImageView fitHeight="530.0" fitWidth="450.0">
+         <image>
+            <Image url="@frame.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="TitleLabel" layoutX="16.0" layoutY="13.0" prefHeight="29.0" prefWidth="135.0" text="GameLines">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="Back" layoutX="371.0" layoutY="13.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="30.0" prefWidth="65.0" text="Back" textAlignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <TextField fx:id="accName" layoutX="16.0" layoutY="63.0" prefHeight="30.0" prefWidth="417.0" promptText="Enter account name here">
+         <effect>
+            <Lighting diffuseConstant="1.15" specularConstant="0.21" specularExponent="40.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="username" layoutX="16.0" layoutY="119.0" prefHeight="30.0" prefWidth="417.0" promptText="Enter Username here">
+         <effect>
+            <Lighting diffuseConstant="1.15" specularConstant="0.21" specularExponent="40.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="addPW" layoutX="16.0" layoutY="175.0" prefHeight="30.0" prefWidth="417.0" promptText="Enter password here">
+         <effect>
+            <Lighting diffuseConstant="1.15" specularConstant="0.21" specularExponent="40.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Button fx:id="add" layoutX="126.0" layoutY="436.0" mnemonicParsing="false" onAction="#setParameters" prefHeight="25.0" prefWidth="198.0" text="Add Account">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Label layoutX="17.0" layoutY="43.0" prefHeight="20.0" prefWidth="167.0" text="Enter account name here:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="16.0" layoutY="99.0" prefHeight="17.0" prefWidth="135.0" text="Enter username here:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="16.0" layoutY="155.0" prefHeight="17.0" prefWidth="135.0" text="Enter password here:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="prompt" alignment="CENTER" layoutX="23.0" layoutY="380.0" prefHeight="51.0" prefWidth="404.0" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="21.0" layoutY="496.0" prefHeight="20.0" prefWidth="108.0" text="Remaining time:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="time" alignment="CENTER" layoutX="124.0" layoutY="498.0" prefHeight="20.0" prefWidth="38.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="162.0" layoutY="498.0" prefHeight="17.0" prefWidth="53.0" text="Seconds">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="extend" layoutX="292.0" layoutY="491.0" mnemonicParsing="false" onAction="#extendTime" prefHeight="30.0" prefWidth="144.0" text="Extend time (4min)">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ProgressBar fx:id="bar" layoutX="18.0" layoutY="472.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="15.0" prefWidth="419.0" progress="0.0" style="-fx-accent: GREEN;" />
+      <Label layoutX="17.0" layoutY="213.0" prefHeight="20.0" prefWidth="313.0" text="Enter notes here (optional) (max. 500 characters):">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="notes" layoutX="17.0" layoutY="233.0" prefHeight="140.0" prefWidth="417.0" promptText="Enter notes here" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.15" specularConstant="0.21" specularExponent="40.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </TextArea>
+   </children>
+</AnchorPane>
