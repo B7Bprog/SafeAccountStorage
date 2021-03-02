@@ -43,8 +43,8 @@ public class NewPWSceneController implements Initializable {
     private static PasswordField myNew2;
     private static Label myPrompt;
     private static Label myPWLabel;
-    private static Button myBackButton;
-    private static Button myCreateButton;
+    protected static Button myBackButton;
+    protected static Button myCreateButton;
     private static Label myTime;
     private static ProgressBar myBar;
 
@@ -60,17 +60,18 @@ public class NewPWSceneController implements Initializable {
         myTime = time;
         myBar = bar;
         ActivatedWindows.isNewPWSceneController = true;
+        myBackButton.setDisable(true);
     }
 
-    public void setBar() {
-        myBar.setProgress((double) SceneController.timercount / 241);
+    public void setBar(){
+        myBar.setProgress((double)SceneController.timercount/241);
     }
 
-    public void extendTime() {
-        SceneController.timercount = 241;
+    public void extendTime(){
+        SceneController.timercount=241;
     }
 
-    public void setTimeLabel(String timeLeft) {
+    public void setTimeLabel(String timeLeft){
         myTime.setText(timeLeft);
     }
 
@@ -106,11 +107,17 @@ public class NewPWSceneController implements Initializable {
         myPrompt.setText(text);
     }
 
+    public static void promptFailed(String text) {
+        myPrompt.setTextFill(Color.RED);
+        myPrompt.setText(text);
+    }
+
     public void changePW() throws Exception {
 
         SceneController.timercount = 241;
         if (myNew1.getText().equals(myNew2.getText())) {
             if (myNew1.getText().length() > 7) {
+
 
                 /*SleepTimer sleepTimer = new SleepTimer();
                 new Thread(sleepTimer).start();*/

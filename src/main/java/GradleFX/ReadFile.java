@@ -34,21 +34,22 @@ public class ReadFile {
             splitWords = oneLine.split("Œ");
 
             Account account;
-            System.out.println("This is length of splitwords: " + splitWords.length);
+            System.out.println("This is length of splitwords: " + splitWords.length );
 
             if (splitWords.length == 4) {
 
-                if (splitWords[3].equals("null")) {
+                if(splitWords[3].equals("null")){
                     account = new Account(splitWords[0], splitWords[1], splitWords[2], "(No notes.)");
-                } else {
+                }else {
 
                     System.out.println("In splitwords length 4");
                     account = new Account(splitWords[0], splitWords[1], splitWords[2], splitWords[3]);
                 }
-            } else {
+            }
+            else {
                 System.out.println("In splitwords length 3");
                 account = new Account(splitWords[0], splitWords[1], splitWords[2], "(No notes.)");
-            }
+        }
             Catalogue.catalogue.add(account);
 
         } while (scanner.hasNextLine());

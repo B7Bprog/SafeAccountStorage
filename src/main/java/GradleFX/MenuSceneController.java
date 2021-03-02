@@ -52,11 +52,12 @@ public class MenuSceneController implements Initializable {
         ActivatedWindows.isMenuActivated = true;
     }
 
-    public void setBar() {
-        myBar.setProgress((double) SceneController.timercount / 241);
+    public void setBar(){
+        myBar.setProgress((double)SceneController.timercount/241);
     }
 
     public void removeFirstScene() {
+
 
 
         Main.stage.close();
@@ -84,11 +85,11 @@ public class MenuSceneController implements Initializable {
 
     }
 
-    public void extendTime() {
-        SceneController.timercount = 241;
+    public void extendTime(){
+        SceneController.timercount=241;
     }
 
-    public void setTimeLabel(String timeLeft) {
+    public void setTimeLabel(String timeLeft){
         myTime.setText(timeLeft);
     }
 

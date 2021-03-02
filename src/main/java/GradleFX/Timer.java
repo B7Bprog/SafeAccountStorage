@@ -27,6 +27,7 @@ public class Timer extends Task {
             Thread.sleep(1000);
 
 
+
             //Show time left
             Platform.runLater(new Runnable() {
                 @Override
@@ -42,6 +43,8 @@ public class Timer extends Task {
             });
 
 
+
+
             Platform.runLater(new Runnable() {
                 @Override
                 public void run() {
@@ -49,31 +52,31 @@ public class Timer extends Task {
                         //FX Stuff done here
                         sceneController.setTimeLabel(Integer.toString(SceneController.timercount));
 
-                        if (ActivatedWindows.isAccountListController) {
+                        if(ActivatedWindows.isAccountListController) {
                             accountListController.setTimeLabel(Integer.toString(SceneController.timercount));
                             accountListController.setBar();
                         }
-                        if (ActivatedWindows.isMenuActivated) {
+                        if(ActivatedWindows.isMenuActivated) {
                             menuSceneController.setTimeLabel(Integer.toString(SceneController.timercount));
                             menuSceneController.setBar();
                         }
-                        if (ActivatedWindows.isSpecAccountController) {
+                        if(ActivatedWindows.isSpecAccountController){
                             specAccountController.setTimeLabel(Integer.toString(SceneController.timercount));
                             specAccountController.setBar();
                         }
-                        if (ActivatedWindows.isAddAccountSceneController) {
+                        if(ActivatedWindows.isAddAccountSceneController){
                             addAccountSceneController.setTimeLabel(Integer.toString(SceneController.timercount));
                             addAccountSceneController.setBar();
                         }
-                        if (ActivatedWindows.isDeleteAccountSceneController) {
+                        if(ActivatedWindows.isDeleteAccountSceneController){
                             deleteAccountSceneController.setTimeLabel(Integer.toString(SceneController.timercount));
                             deleteAccountSceneController.setBar();
                         }
-                        if (ActivatedWindows.isNewPWSceneController) {
+                        if(ActivatedWindows.isNewPWSceneController){
                             newPWSceneController.setTimeLabel(Integer.toString(SceneController.timercount));
                             newPWSceneController.setBar();
                         }
-                        if (ActivatedWindows.isPopup) {
+                        if(ActivatedWindows.isPopup){
                             popupSceneController.setTimeLabel(Integer.toString(SceneController.timercount));
                             popupSceneController.setBar();
                         }
@@ -87,6 +90,7 @@ public class Timer extends Task {
 
 
             SceneController.timercount--;
+
 
 
             if (SceneController.timercount == 60) {

@@ -49,7 +49,7 @@ public class DeleteAccount {
                     System.out.println();
                     sorterFirst.sort();
                     sorter.sort();
-                    WriteToFile.write(SceneController.mainKey);
+                    WriteToFile.write(SceneController.mainKey,"m.games");
                     DeleteAccountSceneController.myNo.setVisible(false);
                     DeleteAccountSceneController.myYes.setVisible(false);
                     DeleteAccountSceneController.prompt("Selected account " + "'" + accName + "'" + " has been deleted.");

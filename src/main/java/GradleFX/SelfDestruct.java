@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 
 public class SelfDestruct {
     public static void deleteDatabase() throws IOException, InterruptedException {
-        WriteToFile.clearFile();
+        WriteToFile.clearFile("m.games");
 
         SceneController.setLabel();
 

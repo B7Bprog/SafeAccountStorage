@@ -16,7 +16,6 @@ public class Account {
         this.passWord = passWord;
         this.notes = notes;
     }
-
     public Account(String accountName, String userName, String passWord) {
         this.accountName = accountName;
         this.userName = userName;
@@ -48,13 +47,9 @@ public class Account {
         this.passWord = passWord;
     }
 
-    public void setNotes(String notes) {
-        this.notes = notes;
-    }
+    public void setNotes(String notes){this.notes = notes;}
 
-    public String getNotes() {
-        return notes;
-    }
+    public String getNotes(){return notes;}
 
     public String toString() {
         //Here using the speacial Unicode UTF8 character: Œ and it's code is: U+008C or encoded byte: c28c

@@ -11,6 +11,7 @@ public class MasterKey {
     // public static boolean jobDone = false;
     static int numOfTryLeft;
     static boolean isRightKey = false;
+    public static boolean successfulResult = false;
 
 
     public void requestKey(String mainKeyIn) throws IOException, InterruptedException {
@@ -64,12 +65,31 @@ public class MasterKey {
 
 
         System.out.println();
+        //NewPWSceneController.myBackButton.setDisable(true);
 
         WriteMainKey.writeKey(key);
+        /*SafeRecryptThread safeRecryptThread = new SafeRecryptThread();
+        new Thread(safeRecryptThread).start();*/
         ReCryptDatabase.recrypt();
 
+       /* while(!successfulResult){
+            System.out.println("INSIDE WHILE WAITING THREAD TO WRITE");
+            NewPWSceneController.prompt("Please wait!");
+            NewPWSceneController.myBackButton.setDisable(true);
+            NewPWSceneController.myCreateButton.setDisable(true);
+            //Thread.sleep(100);
+        }*/
+        NewPWSceneController.myBackButton.setDisable(false);
+        //NewPWSceneController.myCreateButton.setDisable(false);
+
+
+
         NewPWSceneController.disablemyCreateButton();
-        NewPWSceneController.prompt("Main Key has been changed successfully.");
+
+            NewPWSceneController.prompt("Main Key has been changed successfully.");
+
+
+
         /*do {
             if (jobDone) {
                 NewPWSceneController.enableBackButton();

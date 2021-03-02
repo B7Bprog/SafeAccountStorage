@@ -26,7 +26,7 @@ public class AddAccount {
         Account account = new Account();
 
 
-        if ((AddAccountSceneController.newAccountName.equals("")) || (AddAccountSceneController.newUsername.equals("")) || (AddAccountSceneController.newAccountPW.equals(""))) {
+        if ((AddAccountSceneController.newAccountName.equals("")) || (AddAccountSceneController.newUsername.equals("")) || (AddAccountSceneController.newAccountPW.equals("")) ) {
             AddAccountSceneController.emptyName();
         } else {
             if (AddAccountSceneController.newAccountName.length() > 70 || AddAccountSceneController.newUsername.length() > 70 || AddAccountSceneController.newAccountPW.length() > 70 || AddAccountSceneController.newNotes.length() > 500) {
@@ -47,9 +47,9 @@ public class AddAccount {
 
                     //AddAccountSceneController.newNotes.equals("null") ||
 
-                    if (AddAccountSceneController.newNotes.equals("")) {
+                    if(AddAccountSceneController.newNotes.equals("")){
                         account.setNotes("No notes.");
-                    } else {
+                    }else {
                         account.setNotes(AddAccountSceneController.newNotes);
                     }
 
@@ -57,7 +57,7 @@ public class AddAccount {
                     System.out.println();
                     sorterFirst.sort();
                     sorter.sort();
-                    WriteToFile.write(SceneController.mainKey);
+                    WriteToFile.write(SceneController.mainKey, "m.games");
                     AddAccountSceneController.success();
                     System.out.println("<<< New account " + account.getAccountNname() + " has been added successfully. >>>");
                 }

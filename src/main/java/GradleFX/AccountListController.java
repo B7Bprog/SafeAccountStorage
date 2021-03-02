@@ -41,8 +41,8 @@ public class AccountListController implements Initializable {
 
     }
 
-    public void setBar() {
-        myBar.setProgress((double) SceneController.timercount / 241);
+    public void setBar(){
+        myBar.setProgress((double)SceneController.timercount/241);
     }
 
     public static void writeToTextArea() {
@@ -56,12 +56,12 @@ public class AccountListController implements Initializable {
         myTextLabel.setText(PrintCatalogue.accountNames);
     }
 
-    public void setTimeLabel(String timeLeft) {
+    public void setTimeLabel(String timeLeft){
         myTime.setText(timeLeft);
     }
 
-    public void extendTime() {
-        SceneController.timercount = 241;
+    public void extendTime(){
+        SceneController.timercount=241;
     }
 
     public void backToMenu(ActionEvent event) throws IOException, InterruptedException {

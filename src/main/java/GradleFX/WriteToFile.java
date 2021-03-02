@@ -12,8 +12,8 @@ public class WriteToFile {
     public static String toWrite;
     private static final Charset UTF_8 = StandardCharsets.UTF_8;
 
-    public static void write(String key) throws Exception {
-        File myFile = new File("m.games");
+    public static void write(String key, String fileName) throws Exception {
+        File myFile = new File(fileName);
         FileWriter myWriter = new FileWriter(myFile);
         BufferedWriter myBuff = new BufferedWriter(myWriter);
 
@@ -34,8 +34,8 @@ public class WriteToFile {
         //NewPWSceneController.enableBackButton();
     }
 
-    public static void clearFile() throws IOException {
-        File myFile = new File("m.games");
+    public static void clearFile(String fileName) throws IOException {
+        File myFile = new File(fileName);
         FileWriter myWriter = new FileWriter(myFile);
         BufferedWriter myBuff = new BufferedWriter(myWriter);
         myBuff.write("");

@@ -58,15 +58,15 @@ public class SpecAccountController implements Initializable {
 
     }
 
-    public void setBar() {
-        myBar.setProgress((double) SceneController.timercount / 241);
+    public void setBar(){
+        myBar.setProgress((double)SceneController.timercount/241);
     }
 
-    public void extendTime() {
-        SceneController.timercount = 241;
+    public void extendTime(){
+        SceneController.timercount=241;
     }
 
-    public void setTimeLabel(String timeLeft) {
+    public void setTimeLabel(String timeLeft){
         myTime.setText(timeLeft);
     }
 

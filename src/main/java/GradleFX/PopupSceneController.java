@@ -26,12 +26,12 @@ public class PopupSceneController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        myTime = time;
+        myTime=time;
         myBar = bar;
     }
 
-    public void setBar() {
-        myBar.setProgress((double) SceneController.timercount / 241);
+    public void setBar(){
+        myBar.setProgress((double)SceneController.timercount/241);
     }
 
     public void setTimeLabel(String timeLeft) {
@@ -46,7 +46,7 @@ public class PopupSceneController implements Initializable {
         closePopup();
     }
 
-    public void exit() {
+    public void exit(){
         System.exit(0);
     }
 

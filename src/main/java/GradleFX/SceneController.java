@@ -105,16 +105,16 @@ public class SceneController implements Initializable {
      but can't make it work by calling it from Timer Class */
 
 
-    public void extendTime() {
-        timercount = 241;
+    public void extendTime(){
+        timercount=241;
     }
 
-    public void setTimeLabel(String timeLeft) {
+    public void setTimeLabel(String timeLeft){
         myTime.setText(timeLeft);
     }
 
-    public void setBar() {
-        myBar.setProgress((double) timercount / 241);
+    public void setBar(){
+        myBar.setProgress((double)timercount/241);
     }
 
     public void popup() {

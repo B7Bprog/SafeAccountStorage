@@ -66,15 +66,15 @@ public class AddAccountSceneController implements Initializable {
         ActivatedWindows.isAddAccountSceneController = true;
     }
 
-    public void setBar() {
-        myBar.setProgress((double) SceneController.timercount / 241);
+    public void setBar(){
+        myBar.setProgress((double)SceneController.timercount/241);
     }
 
-    public void extendTime() {
-        SceneController.timercount = 241;
+    public void extendTime(){
+        SceneController.timercount=241;
     }
 
-    public void setTimeLabel(String timeLeft) {
+    public void setTimeLabel(String timeLeft){
         myTime.setText(timeLeft);
     }
 
