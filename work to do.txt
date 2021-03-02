@@ -1,2 +1,1 @@
 timer while recrypting
-safe write new PW
