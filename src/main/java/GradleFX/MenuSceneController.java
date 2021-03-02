@@ -63,9 +63,7 @@ public class MenuSceneController implements Initializable {
         Main.stage.close();
     }
 
-    public void exit() {
-        System.exit(0);
-    }
+    public void exit() { System.exit(0);}
 
     public void changeScreen(ActionEvent event) throws IOException, InterruptedException {
 

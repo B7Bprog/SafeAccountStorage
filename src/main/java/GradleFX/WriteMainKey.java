@@ -12,12 +12,32 @@ public class WriteMainKey {
     public static void writeKey(String keyToWrite) throws Exception {
 
 
-        File myFile = new File("mk.games");
+        File myFile = new File("mktemp.games");
         FileWriter myWriter = new FileWriter(myFile);
         BufferedWriter myBuff = new BufferedWriter(myWriter);
         toWrite = EncryptorAesGcmPassword.encrypt(keyToWrite.getBytes(StandardCharsets.UTF_8), keyToWrite);
         //toWrite = Salter.salt(toWrite);
         myBuff.write(toWrite);
+
+
+        myBuff.close();
+        myFile = new File("mk.games");
+        myWriter = new FileWriter(myFile);
+        myBuff = new BufferedWriter(myWriter);
+        toWrite = EncryptorAesGcmPassword.encrypt(keyToWrite.getBytes(StandardCharsets.UTF_8), keyToWrite);
+        //toWrite = Salter.salt(toWrite);
+        myBuff.write(toWrite);
+
+
+
+        myBuff.close();
+
+        myFile = new File("mktemp.games");
+       myWriter = new FileWriter(myFile);
+        myBuff = new BufferedWriter(myWriter);
+        //toWrite = EncryptorAesGcmPassword.encrypt(keyToWrite.getBytes(StandardCharsets.UTF_8), keyToWrite);
+        //toWrite = Salter.salt(toWrite);
+        myBuff.write("");
 
 
         myBuff.close();

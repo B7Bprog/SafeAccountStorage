@@ -92,5 +92,10 @@
          </cursor>
       </Button>
       <ProgressBar fx:id="bar" layoutX="12.0" layoutY="475.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="14.0" prefWidth="422.0" progress="0.0" style="-fx-accent: GREEN;" />
+      <Label layoutX="14.0" layoutY="57.0" prefHeight="17.0" prefWidth="144.0" text="Created By B. Bertalan">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
