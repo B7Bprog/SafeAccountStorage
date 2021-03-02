@@ -67,10 +67,30 @@ public class MasterKey {
         System.out.println();
         //NewPWSceneController.myBackButton.setDisable(true);
 
-        WriteMainKey.writeKey(key);
+        System.out.println("DEBUG this is SceneController.mainKeyAtStart): " + SceneController.mainKeyAtStart);
+        System.out.println("DEBUG This is key: " + key);
+
+        if(!(key).equals(SceneController.mainKeyAtStart)) {
+            WriteMainKey.writeKey(key);
+            ReCryptDatabase.recrypt();
+
+            NewPWSceneController.myBackButton.setDisable(false);
+            //NewPWSceneController.myCreateButton.setDisable(false);
+
+
+
+            NewPWSceneController.disablemyCreateButton();
+
+            NewPWSceneController.prompt("Main Key has been changed successfully.");
+            SceneController.mainKeyAtStart = key;
+        }else{
+            NewPWSceneController.prompKeyAlreadyExists("You've typed the current password! Please type a new one.");
+        }
+
+
+
         /*SafeRecryptThread safeRecryptThread = new SafeRecryptThread();
         new Thread(safeRecryptThread).start();*/
-        ReCryptDatabase.recrypt();
 
        /* while(!successfulResult){
             System.out.println("INSIDE WHILE WAITING THREAD TO WRITE");
@@ -79,14 +99,7 @@ public class MasterKey {
             NewPWSceneController.myCreateButton.setDisable(true);
             //Thread.sleep(100);
         }*/
-        NewPWSceneController.myBackButton.setDisable(false);
-        //NewPWSceneController.myCreateButton.setDisable(false);
 
-
-
-        NewPWSceneController.disablemyCreateButton();
-
-            NewPWSceneController.prompt("Main Key has been changed successfully.");
 
 
 

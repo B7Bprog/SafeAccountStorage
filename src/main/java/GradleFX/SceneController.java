@@ -29,6 +29,7 @@ public class SceneController implements Initializable {
     public static String password = "";
     protected static int timercount = 241;
     protected static String mainKey = "";
+    protected static String mainKeyAtStart = "";
 
 
     @FXML
@@ -213,6 +214,7 @@ public class SceneController implements Initializable {
         System.out.println("Inside SceneController");
 
         mainKey = myPWField.getText();
+        mainKeyAtStart = myPWField.getText();
 
         masterKey.requestKey(mainKey);
 

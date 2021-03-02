@@ -107,7 +107,7 @@ public class NewPWSceneController implements Initializable {
         myPrompt.setText(text);
     }
 
-    public static void promptFailed(String text) {
+    public static void prompKeyAlreadyExists(String text) {
         myPrompt.setTextFill(Color.RED);
         myPrompt.setText(text);
     }
